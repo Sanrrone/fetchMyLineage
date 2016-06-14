@@ -31,5 +31,6 @@ BEGIN{band=0}
 		}
 	}
 	END{print toprint}' |awk -v genus=$genus -v specie=$specie '{
+		print "Kingdom Phylum Class Order Family Genus Specie";
 		print $1, $2, $3, $4, $5, genus, specie
 	}'
