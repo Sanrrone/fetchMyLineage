@@ -1,6 +1,11 @@
 genus=$1
 specie=$2
 
+if [ "$genus" == "" ] || [ "$specie" == "" ];then
+	echo "genus or specie empty, both are neccesary"
+	exit
+fi
+
 curl -s "http://www.ebi.ac.uk/ena/data/view/Taxon:$genus%20$specie&display=xml" |awk '
 BEGIN{band=0}
 {
@@ -31,6 +36,7 @@ BEGIN{band=0}
 		}
 	}
 	END{print toprint}' |awk -v genus=$genus -v specie=$specie '{
+		if($0~"Candidatus"){printf "Kingdom: Unknow\nPhylum: Unknow\nClass: Unknow\nOrder: Unknow\nFamily: Unknow\nGenus: %s\nSpecie: %s\n",genus,specie;exit}
 		print "Kingdom: "$1
 		print "Phylum: "$2
 		print "Class: "$3
