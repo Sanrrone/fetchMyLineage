@@ -36,8 +36,8 @@ BEGIN{band=0}
 		}
 	}
 	END{print toprint}' |awk -v genus=$genus -v specie=$specie '{
-		if($0~"Candidatus"){printf "Kingdom: Unknow\nPhylum: Unknow\nClass: Unknow\nOrder: Unknow\nFamily: Unknow\nGenus: %s\nSpecie: %s\n",genus,specie;exit}
-		print "Kingdom: "$1
+		if($0~"Candidatus"){printf "Superkingdom: Unknow\nPhylum: Unknow\nClass: Unknow\nOrder: Unknow\nFamily: Unknow\nGenus: %s\nSpecie: %s\n",genus,specie;exit}
+		print "Superkingdom: "$1
 		print "Phylum: "$2
 		print "Class: "$3
 		print "Order: "$4
