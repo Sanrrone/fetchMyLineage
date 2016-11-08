@@ -6,7 +6,7 @@ if [ "$genus" == "" ] || [ "$specie" == "" ];then
 	exit
 fi
 
-curl -s "http://www.ebi.ac.uk/ena/data/view/Taxon:$genus%20$specie&display=xml" |awk '
+curl -s "https://www.ebi.ac.uk/ena/data/view/Taxon:$genus%20$specie&display=xml" |awk '
 BEGIN{band=0}
 {
 	if($0~"<lineage>"){
