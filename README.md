@@ -11,3 +11,18 @@ Save yourself headaches :D, you only need a genus and specie name and the script
 ##Usage
 	bash fetchMyLineage.bash [genus] [specie]
 where [genus] and [specie] is a genus and specie name
+
+##Output
+
+Example:
+	
+	bash fetchMyLineage.bash Escherichia Coli
+Output:
+
+	Superkingdom: Bacteria
+	Phylum: Proteobacteria
+	Class: Gammaproteobacteria
+	Order: Enterobacterales
+	Family: Enterobacteriaceae
+	Genus: Escherichia
+	Specie: Coli
