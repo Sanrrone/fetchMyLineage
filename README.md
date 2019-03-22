@@ -1,19 +1,19 @@
 # fetchMyLineage
 ----
 
-fetchMyLineage is a script that fetch a complete lineage (Kingdom, Phylum, Class, Order, Family, Genus, Specie).
-Save yourself headaches :D, you only need a genus and specie name and the script do the work.
+fetchMyLineage is a script that fetch a complete lineage (Kingdom, Phylum, Class, Order, Family, Genus, Species).
+Save yourself headaches :D, you only need a genus and species name and the script will do the work.
 
-##Requisites
+## Requisites
 * bash version >= 4.0
 + Mac OSX
 + (for linux user, replace "tail -r" for "tac" command in the script)
 
-##Usage
+## Usage
 	bash fetchMyLineage.bash [genus] [specie]
 where [genus] and [specie] is a genus and specie name
 
-##Output
+## Output
 
 Example:
 	
